@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&family=Yanone+Kaffeesatz&display=swap");
+* {
+  margin: 0px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+nav {
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(247, 249, 252);
+  display: flex;
+}
+.menu ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 20px;
+}
+header {
+  background-color: lightblue;
+  padding: 19px;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  padding: 35px;
+}
+.menu ul li a {
+  font-size: 28px;
+  color: lightblue;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+.lund:hover {
+  color: lightslategray;
+}
+.lund::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  transition: width 0.3;
+  background-color: lightslategray;
+}
+.lund:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.zoo-image {
+  width: 30%;
+  padding: 18px;
+}
+.zoo h2 {
+  font-size: 50px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-align: center;
+  color: lightslategray;
+}
+body {
+  background-color: rgb(233, 231, 231);
+}
+.zooo {
+  width: 75%;
+  padding: 25px;
+  background-color: white;
+  margin: 20px;
+}
+.left {
+  float: right;
+  width: 200px;
+  background-color: white;
+  padding: 25px;
+  font-size: 30px;
+  margin: 20px;
+  text-transform: capitalize;
+  word-spacing: 8px;
+  color: lightslategray;
+}
+.head-image {
+  width: 8vw;
+  float: right;
+  clip-path: circle(47.1% at 50% 50%);
+}
+.carousel {
+  background: rgb(216, 214, 214);
+}
+
+.carousel-cell {
+  margin-right: 10px;
+  /* width: 100px; */
+}
+.car-img {
+  /* height: auto; */
+  /* width: auto; */
+  width: 70vw;
+  height: max-content;
+}
+.designbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 24vh;
+  background-color: slateblue;
+  margin-top: 28px;
+  box-sizing: border-box;
+  /* position: static; */
+}
+.designbox h1 {
+  position: relative;
+  font-family: "Signika Negative", sans-serif;
+  text-transform: uppercase;
+
+  color: slateblue;
+  overflow: hidden;
+  text-align: left;
+  /* -webkit-text-stroke: 1px rgb(150, 140, 216); */
+}
+.design::before {
+  content: attr(data-asgar);
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #01fe87;
+  /* -webkit-text-stroke: 1px rgb(150, 140, 216); */
+  border-right: 2px solid #01fe87;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0%;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+.neon {
+  min-height: 24vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #07252d;
+}
+.neon h1 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 15px;
+  font-family: arial;
+  text-transform: uppercase;
+  color: #0e3742;
+  -webkit-box-reflect: below 1px linear-gradient(transpatent, #0004);
+  line-height: 0.7em;
+  outline: none;
+  animation: tube 5s linear infinite;
+  font-size: 8vh;
+  overflow: auto;
+}
+
+@keyframes tube {
+  0%,
+  20%,
+  50%,
+  60%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  20.1%,
+  30%,
+  50.1%,
+  60.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 33px #03bcf4;
+  }
+}
+.eco {
+  width: 90%;
+  padding: 20px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+.eco-img {
+  width: 100%;
+  display: block;
+  transition: 1s;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+.eco-img:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+.eco-img1 {
+  width: 20%;
+  margin: 0 10px;
+}
+.ecohead{
+  text-align: center;
+  padding: 0;
+  margin-top: 10px;
+  color: darkslategray;
+}
+
+@media all and (max-width: 650px) {
+  .left {
+    float: none;
+    text-align: center;
+    color: lightslategray;
+    margin: 20px;
+    width: fit-content;
+  }
+  .heading {
+    font-size: 40px;
+    padding: 21px;
+  }
+  .menu ul li a {
+    font-size: 20px;
+  }
+  nav {
+    padding: 0px;
+    justify-content: center;
+    align-items: left;
+    padding: 0px;
+  }
+  .menu ul {
+    padding-left: 0px;
+  }
+  .menu ul li {
+    margin: 10px 10px;
+  }
+  .zoo-image {
+    width: 90%;
+  }
+  .zoo h2 {
+    font-size: 30px;
+  }
+  .zooo {
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .zoo {
+    position: relative;
+  }
+  .eco {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 87%;
+  }
+  .eco-img1 {
+    width: 80%;
+    margin: 10px 10px;
+  }
+}
+@media all and (max-width: 360px) {
+  .menu ul li {
+    margin: 10px 5px;
+  }
+  .heading {
+    font-size: 37px;
+    padding: 25px;
+  }
+  .zoo-image {
+    padding: 15px;
+  }
+  .designbox h1 {
+    font-size: 50px;
+  }
+  .eco {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 87%;
+  }
+  .eco-img1 {
+    width: 80%;
+    margin: 10px 10px;
+  }
+  .ecohead{
+    font-size: 50px;
+  }
+}
+@media all and (min-width: 651px) and (max-width: 777px) {
+  .left {
+    width: 20%;
+    font-size: 23px;
+    padding: 18px;
+  }
+  .zooo {
+    padding: 0px;
+    width: 65%;
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+  .left {
+    padding-left: 15px;
+    margin-left: 10px;
+  }
+  .zoo-image {
+    width: 91%;
+  }
+  .eco {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    width: 87%;
+  }
+  .eco-img1 {
+    width: 90%;
+    margin: 10px 10px;
+    padding: 10px;
+  }
+  .ecolast{
+    grid-column: -3/-1;
+    width: 58%;
+  }
+}
+@media all and (min-width: 778px) and (max-width: 980px) {
+  .zooo {
+    padding: 0px;
+    width: 67%;
+    margin-right: 10px;
+    box-sizing: border-box;
+  }
+  .zoo-image {
+    width: 42%;
+  }
+  .left {
+    width: 17%;
+    margin-left: 10px;
+    font-size: 27px;
+  }
+  .eco {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    width: 87%;
+  }
+  .eco-img1 {
+    width: 90%;
+    margin: 10px 10px;
+    padding: 10px;
+  }
+  .ecolast{
+    grid-column: -3/-1;
+    width: 58%;
+  }
+}
+@media all and (min-width: 981px) and (max-width: 1524px) {
+  .left {
+    width: 18vw;
+    margin-left: 10px;
+  }
+  .zooo {
+    width: 70vw;
+    padding: 0px;
+    margin-right: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .zoo-image {
+    width: 27%;
+  }
+  .zoo {
+    width: 70vw;
+  }
+}
